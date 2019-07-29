@@ -11,10 +11,10 @@ This is a repo documenting a mock tech test set over two days.
 
 ## Acceptance criteria
 
-Given a client makes a deposit of **1000** on **0-01-2012**
-And a deposit of **2000** on **13-01-2012**
-And a withdrawal of **500** on **14-01-2012**
-When she prints her bank statement
+Given a client makes a deposit of **1000** on **0-01-2012**/
+And a deposit of **2000** on **13-01-2012**/
+And a withdrawal of **500** on **14-01-2012**/
+When she prints her bank statement/
 Then she would see...
 
 ```
@@ -24,7 +24,7 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 
-##Input/Output
+## Input/Output
 
 ### What do we want to input?
   - **date** - string
