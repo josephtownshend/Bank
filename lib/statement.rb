@@ -1,9 +1,10 @@
 class Statement
 
-  attr_reader :header
+  attr_reader :header, :body
 
   def initialize
-    @header = "date || credit || debit || balance"
+    @header = ["date || credit || debit || balance"]
+    @body = ["  ||  ||  ||  "]
   end
 
 
