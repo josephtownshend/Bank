@@ -4,9 +4,12 @@ class Bank
     @balance = 0
   end
 
-  def current_balance
+  def get_balance
     @balance
   end
 
+  def deposit(amount)
+    @balance += amount
+  end
 
 end
