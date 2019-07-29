@@ -1,6 +1,5 @@
 require 'statement'
 
-
 RSpec.describe Statement do
   before(:each) do
     @statement = Statement.new

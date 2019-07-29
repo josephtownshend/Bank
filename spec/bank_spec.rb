@@ -5,7 +5,7 @@ RSpec.describe Bank do
     @bank = Bank.new
   end
 
-  it "Default balance of zero" do
+  it "Has default balance of zero" do
     expect(@bank.get_balance).to eq 0
   end
 
