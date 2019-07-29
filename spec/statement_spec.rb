@@ -17,9 +17,15 @@ RSpec.describe Statement do
     end
   end
 
-  describe "#print_statement" do
-    it "Can print the header and body" do
-      expect(@statement.print_statement).to eq "date || credit || debit || balance"
+  describe "#print_header" do
+    it "Can print the header" do
+      expect(@statement.print_header).to eq "date || credit || debit || balance"
+    end
+  end
+
+  describe "#print_body" do
+    it "Can print the body" do
+      expect(@statement.print_body).to eq "  ||  ||  ||  "
     end
   end
 
