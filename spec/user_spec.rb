@@ -6,6 +6,6 @@ RSpec.describe User do
   end
 
   it "By default Account array is empty" do
-    expect(@user.get_account).to eq []
+    expect(@user.account).to eq []
   end
 end
