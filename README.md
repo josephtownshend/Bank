@@ -37,3 +37,19 @@ date || credit || debit || balance
   - **credit** - float
   - **debit** - float
   - **balance** - float
+
+## Approach
+
+I want to TDD in a clear and efficient manner and create clean DRY code, written for humans.
+
+1. I want to set my project up appropriately.
+2. I want to write the basic behaviour of the Bank class.
+  - get_balance
+  - deposit(amount)
+  - withdraw(amount)
+3. I want all code to be created using TDD.
+4. I want to then work on printing the statement.
+  - date || credit || debit || balance
+  - 14/01/2012 || || 500.00 || 2500.00
+  - 13/01/2012 || 2000.00 || || 3000.00
+  - 10/01/2012 || 1000.00 || || 1000.00
