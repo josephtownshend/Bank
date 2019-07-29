@@ -12,5 +12,13 @@ RSpec.describe Bank do
   end
 end
 
+describe "#withdaw" do
+  it "Can withdaw funds from account" do
+    subject.deposit(100)
+    subject.withdraw(50)
+    expect(subject.get_balance).to eq 50
+  end
+end
+
 
 end
