@@ -1,7 +1,10 @@
 class Statement
 
-  def print_first_line
-    "date || credit || debit || balance"
+  attr_reader :header
+
+  def initialize
+    @header = "date || credit || debit || balance"
   end
+
 
 end
