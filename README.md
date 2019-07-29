@@ -48,7 +48,12 @@ I want to TDD in a clear and efficient manner and create clean DRY code, written
   - deposit(amount)
   - withdraw(amount)
 3. I want all code to be created using TDD.
-4. I want to then work on printing the statement.
+4. I want to then work on printing the first line of statement.
+  - date || credit || debit || balance
+5. I want to set up the User - so they can use their bank account.
+6. I want to bring in their balance
+
+Finish. I want to print the full statement.
   - date || credit || debit || balance
   - 14/01/2012 || || 500.00 || 2500.00
   - 13/01/2012 || 2000.00 || || 3000.00
