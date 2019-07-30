@@ -14,7 +14,7 @@ class Bank
     @balance += amount
     @new_transaction = []
     @new_transaction << "#{@date} || #{amount} || || #{@balance}"
-    @transaction_history << @new_transaction.join
+    @transaction_history << @new_transaction.join(" ")
   end
 
   def debit(amount)
@@ -24,9 +24,13 @@ class Bank
     @transaction_history << @new_transaction.join(" ")
   end
 
+  def create_statement
+    @transaction_history << @header
+    @transaction_history.reverse
+  end
+
   def print_statement
-    puts @header
-    @transaction_history.each { |entry| puts entry }
+    @transaction_history.each { |entry| print entry }
   end
 
 end

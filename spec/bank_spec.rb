@@ -39,11 +39,11 @@ RSpec.describe Bank do
     end
   end
 
-  describe '#print' do
-    it 'Can print a full statement' do
+  describe '#create_statement' do
+    it 'Can create a full statement and order it' do
       @bank.credit(100)
       @bank.debit(50)
-      expect(@bank.print_statement).to eq "date || credit || debit || balance"
+      expect(@bank.create_statement).to eq ["date || credit || debit || balance", "30/07/19 || || 50 || 50", "30/07/19 || 100 || || 100"]
     end
   end
 
