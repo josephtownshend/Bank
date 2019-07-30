@@ -27,13 +27,13 @@ date || credit || debit || balance
 ## To Get Started
 
 - Clone this repo\
-*`$ git clone git@github.com:josephtownshend/bank.git`
+* `$ git clone git@github.com:josephtownshend/bank.git`
 
 - Run bundle to install dependencies\
-*`$ bundle install`
+* `$ bundle install`
 
 - Run irb in terminal\
-*`$ irb`
+* `$ irb`
 
 - Here is a code snippet of how to run the programme
 ```
@@ -60,15 +60,15 @@ date || credit || debit || balance
 
 Testing has been done with RSpec, SimpleCov and Rubocop
 
-- To run RSpec
-`$ rspec`
+- To run RSpec\
+* `$ rspec`
 * `9 examples, 0 failures`
 
-- To run Rubocop
-`$ rubocop`
+- To run Rubocop\
+* `$ rubocop`
 * `4 files inspected, no offenses detected`
 
-- SimpleCov runs with RSpec
+- SimpleCov runs with RSpec\
 * `COVERAGE: 100.00% -- 65/65 lines in 2 files`
 
 --------
