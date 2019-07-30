@@ -1,6 +1,6 @@
 # Bank Tech Test
 
-This is a repo documenting the bank mock tech test and was set over two days.
+This is a repo documenting the bank mock tech test. This test was set over two days.
 
 ## Requirements
 
@@ -26,14 +26,14 @@ date || credit || debit || balance
 
 ## To Get Started
 
-- Clone this repo
-`$ git clone git@github.com:josephtownshend/bank.git`
+- Clone this repo\
+*`$ git clone git@github.com:josephtownshend/bank.git`
 
-- Run bundle to install dependencies
-`$ bundle install`
+- Run bundle to install dependencies\
+*`$ bundle install`
 
-- Run irb in terminal
-`$ irb`
+- Run irb in terminal\
+*`$ irb`
 
 - Here is a code snippet of how to run the programme
 ```
