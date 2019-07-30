@@ -26,11 +26,11 @@ class Bank
 
   def create_statement
     @transaction_history << @header
-    @transaction_history.reverse
+    @transaction_history.reverse.join("\n")
   end
 
   def print_statement
-    @transaction_history.each { |entry| print entry }
+    create_statement
   end
 
 end

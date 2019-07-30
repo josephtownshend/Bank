@@ -6,8 +6,8 @@ RSpec.describe Bank do
   before(:each) do
     @bank = Bank.new
   end
-  describe 'default state' do
-    it 'Has default balance of zero' do
+  describe '#initialize' do
+    it 'Has balance of zero' do
       expect(@bank.balance).to eq 0
     end
 
@@ -15,11 +15,11 @@ RSpec.describe Bank do
       expect(@bank.date).to eq '30/07/19'
     end
 
-    it 'Has an empty transaction as default' do
+    it 'Has an empty transaction_history' do
       expect(@bank.transaction_history).to eq []
     end
 
-    it 'Has an header for statement' do
+    it 'Has a header for statement' do
       expect(@bank.header).to eq "date || credit || debit || balance"
     end
   end
@@ -40,15 +40,22 @@ RSpec.describe Bank do
   end
 
   describe '#create_statement' do
-    it 'Can create a full statement and order it' do
+    it 'Can create a full statement' do
       @bank.credit(100)
       @bank.debit(50)
-      expect(@bank.create_statement).to eq ["date || credit || debit || balance", "30/07/19 || || 50 || 50", "30/07/19 || 100 || || 100"]
+      expect(@bank.create_statement).to eq "date || credit || debit || balance\n30/07/19 || || 50 || 50\n30/07/19 || 100 || || 100"
+    end
+  end
+
+  describe '#print_statement' do
+    it "can print the statement" do
+      @bank.debit(50)
+      expect(@bank.print_statement).to eq "date || credit || debit || balance\n30/07/19 || || 50 || -50"
     end
   end
 
   describe 'Multple transactions' do
-    it "Can add multiple transactions to t_history" do
+    it "Can add multiple transactions to transaction_history" do
       @bank.credit(100)
       @bank.credit(25)
       @bank.debit(50)
@@ -57,5 +64,4 @@ RSpec.describe Bank do
       expect(@bank.transaction_history[2]).to eq "30/07/19 || || 50 || 75"
     end
   end
-
 end
