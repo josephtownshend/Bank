@@ -1,9 +1,10 @@
 class Bank
 
-  attr_reader :balance
+  attr_reader :balance, :time
 
   def initialize
     @balance = 0
+    @time = "30/07/19"
   end
 
   def deposit(amount)

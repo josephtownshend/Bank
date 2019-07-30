@@ -9,6 +9,10 @@ RSpec.describe Bank do
     expect(@bank.balance).to eq 0
   end
 
+  it "Has a current date" do
+    expect(@bank.time).to eq "30/07/19"
+  end
+
   describe "#deposit" do
     it "Can deposit funds into account" do
       @bank.deposit(100)
