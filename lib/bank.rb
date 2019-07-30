@@ -11,16 +11,16 @@ class Bank
   end
 
   def credit(amount)
-    @balance += amount
+    @balance += amount.to_f
     @new_transaction = []
-    @new_transaction << "#{@date} || #{amount} || || #{@balance}"
+    @new_transaction << "#{@date} || #{amount.to_f} || || #{@balance}"
     @transaction_history << @new_transaction.join(' ')
   end
 
   def debit(amount)
-    @balance -= amount
+    @balance -= amount.to_f
     @new_transaction = []
-    @new_transaction << "#{@date} || || #{amount} || #{@balance}"
+    @new_transaction << "#{@date} || || #{amount.to_f} || #{@balance}"
     @transaction_history << @new_transaction.join(' ')
   end
 
