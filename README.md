@@ -7,12 +7,13 @@ $$  __$$\ $$  __$$ |$$ \$$$$ |$$  $$<
 $$ |  $$ |$$ |  $$ |$$ |\$$$ |$$ |\$$\  
 $$$$$$$  |$$ |  $$ |$$ | \$$ |$$ | \$$\
 \_______/ \__|  \__|\__|  \__|\__|  \__|
-
 ```
 
 # Bank Tech Test
 
 This is a repo documenting the bank mock tech test. This test was set over two days.
+
+-------
 
 ## Requirements
 
