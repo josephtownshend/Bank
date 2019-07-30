@@ -26,16 +26,16 @@ date || credit || debit || balance
 
 ## To Get Started
 
-- Clone this repo
+- Clone this repo\
 *`$ git clone git@github.com:josephtownshend/bank.git`
 
-- Run bundle to install dependencies
+- Run bundle to install dependencies\
 *`$ bundle install`
 
-- Run irb in terminal
+- Run irb in terminal\
 *`$ irb`
 
-- Here is a code snippet of how to run the programme
+- Here is a code snippet of how to run the programme\
 ```
 josephs-MacBook-Pro:bank josephtownshend$ irb
 2.6.0 :001 > require './lib/bank'
@@ -60,15 +60,15 @@ date || credit || debit || balance
 
 Testing has been done with RSpec, SimpleCov and Rubocop
 
-- To run RSpec
+- To run RSpec\
 *`$ rspec`
 *`9 examples, 0 failures`
 
-- To run Rubocop
+- To run Rubocop\
 *`$ rubocop`
 *`4 files inspected, no offenses detected`
 
-- SimpleCov runs with RSpec
+- SimpleCov runs with RSpec\
 *`COVERAGE: 100.00% -- 65/65 lines in 2 files`
 
 --------
