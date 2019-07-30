@@ -34,4 +34,8 @@ class Bank
     @transaction_history << new_transaction
   end
 
+  def print_statement
+    return @header
+  end
+
 end
