@@ -62,7 +62,7 @@ Finish. I want to print the full statement.
 
   - output needs to be floats.
   - can we do something about the date?
-  - change tests to break on to multiple lines (in array, each line in "" with a comma, then .join("\"))
+  - ~change tests to break on to multiple lines (in array, each line in "" with a comma, then .join("\"))~
   - SRP some of the methods?
   - finish README.md
   - remove header and just push it into the []?
