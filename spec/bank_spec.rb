@@ -20,17 +20,17 @@ RSpec.describe Bank do
     end
   end
 
-  describe '#deposit' do
-    it 'Can deposit funds into account' do
-      @bank.deposit(100)
+  describe '#credit' do
+    it 'Can credit funds into account' do
+      @bank.credit(100)
       expect(@bank.balance).to eq 100
     end
   end
 
-  describe '#withdraw' do
-    it 'Can withdraw funds from account' do
-      @bank.deposit(100)
-      @bank.withdraw(50)
+  describe '#debit' do
+    it 'Can debit funds from account' do
+      @bank.credit(100)
+      @bank.debit(50)
       expect(@bank.balance).to eq 50
     end
   end

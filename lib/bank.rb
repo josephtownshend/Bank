@@ -9,11 +9,11 @@ class Bank
     @transaction = []
   end
 
-  def deposit(amount)
+  def credit(amount)
     @balance += amount
   end
 
-  def withdraw(amount)
+  def debit(amount)
     @balance -= amount
   end
 
