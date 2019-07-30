@@ -39,6 +39,14 @@ RSpec.describe Bank do
     end
   end
 
+  describe '#print' do
+    it 'Can print a full statement' do
+      @bank.credit(100)
+      @bank.debit(50)
+      expect(@bank.print_statement).to eq "date || credit || debit || balance"
+    end
+  end
+
   describe 'Multple transactions' do
     it "Can add multiple transactions to t_history" do
       @bank.credit(100)

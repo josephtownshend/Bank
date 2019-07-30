@@ -13,30 +13,20 @@ class Bank
   def credit(amount)
     @balance += amount
     @new_transaction = []
-    @new_transaction << @date
-    @new_transaction << "||"
-    @new_transaction << amount
-    @new_transaction << "||"
-    @new_transaction << "||"
-    @new_transaction << @balance
-    @transaction_history << @new_transaction.join(" ")
+    @new_transaction << "#{@date} || #{amount} || || #{@balance}"
+    @transaction_history << @new_transaction.join
   end
 
   def debit(amount)
     @balance -= amount
     @new_transaction = []
-    @new_transaction << @date
-    @new_transaction << "||"
-    @new_transaction << "||"
-    @new_transaction << amount
-    @new_transaction << "||"
-    @new_transaction << @balance
+    @new_transaction << "#{@date} || || #{amount} || #{@balance}"
     @transaction_history << @new_transaction.join(" ")
   end
 
-  # def add_transaction
-  #   @transaction_history << @new_transaction.join(" ")
-  # end
-
+  def print_statement
+    puts @header
+    @transaction_history.each { |entry| puts entry }
+  end
 
 end
