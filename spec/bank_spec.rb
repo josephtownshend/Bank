@@ -20,14 +20,14 @@ RSpec.describe Bank do
     end
 
     it 'Has a header for statement' do
-      expect(@bank.header).to eq "date || credit || debit || balance"
+      expect(@bank.header).to eq 'date || credit || debit || balance'
     end
   end
 
   describe '#credit' do
     it 'Can credit funds into account' do
       @bank.credit(100)
-      expect(@bank.transaction_history[0]).to eq "30/07/19 || 100 || || 100"
+      expect(@bank.transaction_history[0]).to eq '30/07/19 || 100 || || 100'
     end
   end
 
@@ -35,7 +35,7 @@ RSpec.describe Bank do
     it 'Can debit funds from account' do
       @bank.credit(100)
       @bank.debit(50)
-      expect(@bank.transaction_history[1]).to eq "30/07/19 || || 50 || 50"
+      expect(@bank.transaction_history[1]).to eq '30/07/19 || || 50 || 50'
     end
   end
 
@@ -48,20 +48,20 @@ RSpec.describe Bank do
   end
 
   describe '#print_statement' do
-    it "Can print the statement" do
+    it 'Can print the statement' do
       @bank.debit(50)
       expect { @bank.print_statement }.to output("date || credit || debit || balance\n30/07/19 || || 50 || -50").to_stdout
     end
   end
 
   describe 'Multple transactions' do
-    it "Can add multiple transactions to transaction_history" do
+    it 'Can add multiple transactions to transaction_history' do
       @bank.credit(100)
       @bank.credit(25)
       @bank.debit(50)
-      expect(@bank.transaction_history[0]).to eq "30/07/19 || 100 || || 100"
-      expect(@bank.transaction_history[1]).to eq "30/07/19 || 25 || || 125"
-      expect(@bank.transaction_history[2]).to eq "30/07/19 || || 50 || 75"
+      expect(@bank.transaction_history[0]).to eq '30/07/19 || 100 || || 100'
+      expect(@bank.transaction_history[1]).to eq '30/07/19 || 25 || || 125'
+      expect(@bank.transaction_history[2]).to eq '30/07/19 || || 50 || 75'
     end
   end
 end

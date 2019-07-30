@@ -7,21 +7,21 @@ class Bank
     @balance = 0
     @date = '30/07/19'
     @transaction_history = []
-    @header = "date || credit || debit || balance"
+    @header = 'date || credit || debit || balance'
   end
 
   def credit(amount)
     @balance += amount
     @new_transaction = []
     @new_transaction << "#{@date} || #{amount} || || #{@balance}"
-    @transaction_history << @new_transaction.join(" ")
+    @transaction_history << @new_transaction.join(' ')
   end
 
   def debit(amount)
     @balance -= amount
     @new_transaction = []
     @new_transaction << "#{@date} || || #{amount} || #{@balance}"
-    @transaction_history << @new_transaction.join(" ")
+    @transaction_history << @new_transaction.join(' ')
   end
 
   def create_statement
@@ -31,7 +31,6 @@ class Bank
 
   def print_statement
     print create_statement
-    "Statement Printed"
+    'Statement Printed'
   end
-
 end

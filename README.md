@@ -27,16 +27,10 @@ date || credit || debit || balance
 ## Input/Output
 
 ### What do we want to input?
-  - **date** - string
-  - **credit** - float or integer
-  - **debit** - float or integer
-  - **balance** - float or integer
+  - **credit** or **debit** amount as an integer or float
 
 ### What do we want to output?
-  - **date** - string
-  - **credit** - float
-  - **debit** - float
-  - **balance** - float
+  - **date** - **credit** - **debit** - **balance**
 
 ## Approach
 
@@ -53,8 +47,22 @@ I want to TDD in a clear and efficient manner and create clean DRY code, written
 5. I want to set up the User - so they can use their bank account.
 6. I want to bring in their balance
 
+This approach didn't work for me - I became blocked and lost. So I went back and tried again in a much simpler way.
+
+
 Finish. I want to print the full statement.
   - date || credit || debit || balance
   - 14/01/2012 || || 500.00 || 2500.00
   - 13/01/2012 || 2000.00 || || 3000.00
   - 10/01/2012 || 1000.00 || || 1000.00
+
+
+
+  NOTES
+
+  - output needs to be floats.
+  - can we do something about the date?
+  - change tests to break on to multiple lines (in array, each line in "" with a comma, then .join("\"))
+  - SRP some of the methods?
+  - finish README.md
+  - remove header and just push it into the []?
