@@ -10,7 +10,7 @@ RSpec.describe Bank do
   end
 
   it "Has a current date" do
-    expect(@bank.time).to eq "30/07/19"
+    expect(@bank.date).to eq "30/07/19"
   end
 
   describe "#deposit" do
@@ -25,6 +25,13 @@ describe "#withdraw" do
     @bank.deposit(100)
     @bank.withdraw(50)
     expect(@bank.balance).to eq 50
+  end
+end
+
+describe "log_transaction" do
+  it "Can log a deposit with date" do
+    @bank.log_transaction
+    expect(@bank.transaction).to eq [0, "30/07/19"]
   end
 end
 
