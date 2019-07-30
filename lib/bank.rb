@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 class Bank
-  attr_reader :balance, :date, :transaction_history
+  attr_reader :balance, :date, :transaction_history, :header
 
   def initialize
     @balance = 0
     @date = '30/07/19'
     @transaction_history = []
+    @header = "date || credit || debit || balance"
   end
 
   def credit(amount)

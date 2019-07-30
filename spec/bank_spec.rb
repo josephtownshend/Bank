@@ -18,8 +18,12 @@ RSpec.describe Bank do
     it 'Has an empty transaction as default' do
       expect(@bank.transaction_history).to eq []
     end
-  end
 
+    it 'Has an header for statement' do
+      expect(@bank.header).to eq "date || credit || debit || balance"
+    end
+  end
+  
   describe '#credit' do
     it 'Can credit funds into account' do
       @bank.credit(100)
@@ -32,6 +36,14 @@ RSpec.describe Bank do
       @bank.credit(100)
       @bank.debit(50)
       expect(@bank.transaction_history[1]).to eq ["30/07/19", "||", "||", 50, "||", 50]
+    end
+  end
+
+  describe '#print_statement' do
+    it 'Can print a full statement' do
+      @bank.credit(100)
+      @bank.debit(50)
+      expect(@bank.print_statement).to eq "date || credit || debit || balance"
     end
   end
 
