@@ -30,7 +30,8 @@ class Bank
   end
 
   def print_statement
-    create_statement
+    print create_statement
+    "Statement Printed"
   end
 
 end

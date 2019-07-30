@@ -48,9 +48,9 @@ RSpec.describe Bank do
   end
 
   describe '#print_statement' do
-    it "can print the statement" do
+    it "Can print the statement" do
       @bank.debit(50)
-      expect(@bank.print_statement).to eq "date || credit || debit || balance\n30/07/19 || || 50 || -50"
+      expect { @bank.print_statement }.to output("date || credit || debit || balance\n30/07/19 || || 50 || -50").to_stdout
     end
   end
 
