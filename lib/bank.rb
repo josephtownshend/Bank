@@ -4,24 +4,24 @@ require_relative 'print'
 class Bank
   attr_reader :balance, :date, :transaction_history, :header
 
-  def initialize(print = Print.new)
+  def initialize(print = Print.new, datetoday = DateToday.new)
     @balance = 0
-    @date = '30/07/19'
     @transaction_history = []
     @print = print
+    @datetoday = datetoday
   end
 
   def credit(amount)
     @balance += amount.to_f
     @new_transaction = []
-    @new_transaction << "#{@date} || #{amount.to_f} || || #{@balance}"
+    @new_transaction << "#{@datetoday.date} || #{amount.to_f} || || #{@balance}"
     @transaction_history << @new_transaction.join(' ')
   end
 
   def debit(amount)
     @balance -= amount.to_f
     @new_transaction = []
-    @new_transaction << "#{@date} || || #{amount.to_f} || #{@balance}"
+    @new_transaction << "#{@datetoday.date} || || #{amount.to_f} || #{@balance}"
     @transaction_history << @new_transaction.join(' ')
   end
 
