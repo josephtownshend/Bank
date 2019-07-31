@@ -26,7 +26,7 @@ class Bank
   end
 
   def print_statement
-     print @print.format_statement(@transaction_history)
+     print @print.create_statement(@transaction_history)
     'Statement Printed'
   end
 end
