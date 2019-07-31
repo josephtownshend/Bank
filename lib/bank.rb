@@ -1,13 +1,14 @@
 # frozen_string_literal: true
+require_relative 'print'
 
 class Bank
   attr_reader :balance, :date, :transaction_history, :header
 
-  def initialize
+  def initialize(print = Print.new)
     @balance = 0
     @date = '30/07/19'
     @transaction_history = []
-    @header = 'date || credit || debit || balance'
+    @print = print
   end
 
   def credit(amount)
@@ -25,7 +26,7 @@ class Bank
   end
 
   def create_statement
-    @transaction_history << @header
+    @transaction_history << @print.print_header
     @transaction_history.reverse.join("\n")
   end
 

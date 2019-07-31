@@ -9,6 +9,7 @@
         1,
         1,
         9,
+        9,
         null,
         1,
         1,
@@ -85,6 +86,7 @@
       ],
       "/Users/josephtownshend/projects/MAKERS/WEEK_10/bank/lib/bank.rb": [
         null,
+        1,
         null,
         1,
         1,
@@ -120,8 +122,33 @@
         1,
         null,
         null
+      ],
+      "/Users/josephtownshend/projects/MAKERS/WEEK_10/bank/lib/print.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        4,
+        null,
+        null,
+        null
+      ],
+      "/Users/josephtownshend/projects/MAKERS/WEEK_10/bank/spec/print_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1564512380
+    "timestamp": 1564577609
   }
 }

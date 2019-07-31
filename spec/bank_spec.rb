@@ -5,6 +5,7 @@ require 'bank'
 RSpec.describe Bank do
   before(:each) do
     @bank = Bank.new
+    @print = Print.new
   end
   describe '#initialize' do
     it 'Has balance of zero' do
@@ -19,9 +20,9 @@ RSpec.describe Bank do
       expect(@bank.transaction_history).to eq []
     end
 
-    it 'Has a header for statement' do
-      expect(@bank.header).to eq 'date || credit || debit || balance'
-    end
+    # it 'Has a header for statement' do
+    #   expect(@print.print_header).to eq 'date || credit || debit || balance'
+    # end
   end
 
   describe '#credit' do
