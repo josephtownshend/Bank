@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require_relative 'print'
 
 class Bank
@@ -26,7 +27,7 @@ class Bank
   end
 
   def print_statement
-     print @print.create_statement(@transaction_history)
+    print @print.create_statement(@transaction_history)
     'Statement Printed'
   end
 end

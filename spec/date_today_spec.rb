@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'date_today'
 require 'timecop'
 
@@ -9,7 +11,7 @@ RSpec.describe DateToday do
 
   describe '#initialize' do
     it 'Has a current date' do
-      expect(@datetoday.date).to eq "12/11/1990"
+      expect(@datetoday.date).to eq '12/11/1990'
     end
   end
 end

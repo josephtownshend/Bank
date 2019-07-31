@@ -65,6 +65,7 @@
       ],
       "/Users/josephtownshend/projects/MAKERS/WEEK_10/bank/lib/bank.rb": [
         null,
+        null,
         1,
         null,
         1,
@@ -98,8 +99,9 @@
         null
       ],
       "/Users/josephtownshend/projects/MAKERS/WEEK_10/bank/lib/print.rb": [
-        1,
         null,
+        null,
+        1,
         1,
         null,
         1,
@@ -120,10 +122,11 @@
         1,
         2,
         null,
-        null,
         null
       ],
       "/Users/josephtownshend/projects/MAKERS/WEEK_10/bank/spec/date_today_spec.rb": [
+        null,
+        null,
         1,
         1,
         null,
@@ -141,17 +144,19 @@
         null
       ],
       "/Users/josephtownshend/projects/MAKERS/WEEK_10/bank/lib/date_today.rb": [
-        1,
         null,
+        null,
+        1,
         1,
         null,
         1,
         7,
         null,
-        null,
         null
       ],
       "/Users/josephtownshend/projects/MAKERS/WEEK_10/bank/spec/print_spec.rb": [
+        null,
+        null,
         1,
         null,
         1,

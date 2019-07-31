@@ -1,6 +1,7 @@
-class Print
+# frozen_string_literal: true
 
-attr_reader :header
+class Print
+  attr_reader :header
 
   def initialize
     @header = 'date || credit || debit || balance'
@@ -20,5 +21,4 @@ attr_reader :header
   def format_statement(transaction_history)
     transaction_history.reverse.join("\n")
   end
-
 end
