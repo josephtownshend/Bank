@@ -58,3 +58,21 @@ RSpec.describe Bank do
     end
   end
 end
+
+#
+# feature test
+# #
+# # bank.deposit(1000)
+# # date mocked
+# # bank.deposit(2500)
+# # date mocked
+# # bank.deposit(3000)
+# # date mocked
+# #timecop.return #to reset time
+# # bank.print statement
+#
+#
+# unit test
+#
+# everything should be mocked
+# so then the feature test - prooves functionality
