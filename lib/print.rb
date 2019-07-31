@@ -1,5 +1,3 @@
-require_relative 'bank'
-
 class Print
 
 attr_reader :header
@@ -8,6 +6,12 @@ attr_reader :header
     @header = 'date || credit || debit || balance'
   end
 
+  def create_statement(transaction_history)
+    add_header(transaction_history)
+    format_statement(transaction_history)
+  end
+
+  private
 
   def add_header(transaction_history)
     transaction_history << @header
@@ -17,8 +21,4 @@ attr_reader :header
     transaction_history.reverse.join("\n")
   end
 
-  def create_statement(transaction_history)
-    add_header(transaction_history)
-    format_statement(transaction_history)
-  end
 end
