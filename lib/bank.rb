@@ -25,13 +25,8 @@ class Bank
     @transaction_history << @new_transaction.join(' ')
   end
 
-  def create_statement
-    @transaction_history << @print.print_header
-    @transaction_history.reverse.join("\n")
-  end
-
   def print_statement
-    print create_statement
+     print @print.format_statement(@transaction_history)
     'Statement Printed'
   end
 end
