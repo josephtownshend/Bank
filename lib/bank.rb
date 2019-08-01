@@ -14,20 +14,30 @@ class Bank
 
   def credit(amount)
     @balance += amount.to_f
-    @new_transaction = []
-    @new_transaction << "#{@datetoday.date} || #{amount.to_f} || || #{@balance}"
-    @transaction_history << @new_transaction.join(' ')
+    credit_transaction(amount)
   end
 
   def debit(amount)
     @balance -= amount.to_f
-    @new_transaction = []
-    @new_transaction << "#{@datetoday.date} || || #{amount.to_f} || #{@balance}"
-    @transaction_history << @new_transaction.join(' ')
+    debit_transaction(amount)
   end
 
   def print_statement
     print @print.create_statement(@transaction_history)
     'Statement Printed'
+  end
+
+  private
+
+  def credit_transaction(amount)
+    @new_transaction = []
+    @new_transaction << "#{@datetoday.date} || #{amount.to_f} || || #{@balance}"
+    @transaction_history << @new_transaction.join(' ')
+  end
+
+  def debit_transaction(amount)
+    @new_transaction = []
+    @new_transaction << "#{@datetoday.date} || || #{amount.to_f} || #{@balance}"
+    @transaction_history << @new_transaction.join(' ')
   end
 end
