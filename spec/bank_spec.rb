@@ -21,7 +21,7 @@ RSpec.describe Bank do
   describe '#credit' do
     it 'Can credit funds into account' do
       @bank.credit(100)
-      expect(@bank.transaction_history[0]).to eq '12/11/1990 || 100.0 || || 100.0'
+      expect(@bank.transaction_history[0]).to eq '12/11/1990 || 100.00 || || 100.00'
     end
   end
 
@@ -29,7 +29,7 @@ RSpec.describe Bank do
     it 'Can debit funds from account' do
       @bank.credit(100)
       @bank.debit(50)
-      expect(@bank.transaction_history[1]).to eq '12/11/1990 || || 50.0 || 50.0'
+      expect(@bank.transaction_history[1]).to eq '12/11/1990 || || 50.00 || 50.00'
     end
   end
 
@@ -40,9 +40,9 @@ RSpec.describe Bank do
       @bank.debit(500.00)
       expect { @bank.print_statement }.to output([
         'date || credit || debit || balance',
-        '12/11/1990 || || 500.0 || 2500.0',
-        '12/11/1990 || 2000.0 || || 3000.0',
-        '12/11/1990 || 1000.0 || || 1000.0'
+        '12/11/1990 || || 500.00 || 2500.00',
+        '12/11/1990 || 2000.00 || || 3000.00',
+        '12/11/1990 || 1000.00 || || 1000.00'
       ].join("\n")).to_stdout
     end
   end
@@ -52,9 +52,9 @@ RSpec.describe Bank do
       @bank.credit(1000.00)
       @bank.credit(2000.00)
       @bank.debit(500.00)
-      expect(@bank.transaction_history[0]).to eq '12/11/1990 || 1000.0 || || 1000.0'
-      expect(@bank.transaction_history[1]).to eq '12/11/1990 || 2000.0 || || 3000.0'
-      expect(@bank.transaction_history[2]).to eq '12/11/1990 || || 500.0 || 2500.0'
+      expect(@bank.transaction_history[0]).to eq '12/11/1990 || 1000.00 || || 1000.00'
+      expect(@bank.transaction_history[1]).to eq '12/11/1990 || 2000.00 || || 3000.00'
+      expect(@bank.transaction_history[2]).to eq '12/11/1990 || || 500.00 || 2500.00'
     end
   end
 end
