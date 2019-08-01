@@ -111,5 +111,9 @@ My approach was much better and I managed to get the work done. I feel much bett
 ## Notes
 
   - needs to be 2 decimal places
-  - date is fixed
+  - ~date is fixed~
+    - ~use Timecop~
+  - feature test
+    - yes but not working with Timecop
   - methods have multiple responsibilities
+    - a lot better!

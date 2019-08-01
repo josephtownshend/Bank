@@ -1,36 +1,43 @@
 # frozen_string_literal: true
 
+require_relative 'print'
+
 class Bank
   attr_reader :balance, :date, :transaction_history, :header
 
-  def initialize
+  def initialize(print = Print.new, datetoday = DateToday.new)
     @balance = 0
-    @date = '30/07/19'
     @transaction_history = []
-    @header = 'date || credit || debit || balance'
+    @print = print
+    @datetoday = datetoday
   end
 
   def credit(amount)
     @balance += amount.to_f
-    @new_transaction = []
-    @new_transaction << "#{@date} || #{amount.to_f} || || #{@balance}"
-    @transaction_history << @new_transaction.join(' ')
+    credit_transaction(amount)
   end
 
   def debit(amount)
     @balance -= amount.to_f
-    @new_transaction = []
-    @new_transaction << "#{@date} || || #{amount.to_f} || #{@balance}"
-    @transaction_history << @new_transaction.join(' ')
-  end
-
-  def create_statement
-    @transaction_history << @header
-    @transaction_history.reverse.join("\n")
+    debit_transaction(amount)
   end
 
   def print_statement
-    print create_statement
+    print @print.create_statement(@transaction_history)
     'Statement Printed'
+  end
+
+  private
+
+  def credit_transaction(amount)
+    @new_transaction = []
+    @new_transaction << "#{@datetoday.date} || #{amount.to_f} || || #{@balance}"
+    @transaction_history << @new_transaction.join(' ')
+  end
+
+  def debit_transaction(amount)
+    @new_transaction = []
+    @new_transaction << "#{@datetoday.date} || || #{amount.to_f} || #{@balance}"
+    @transaction_history << @new_transaction.join(' ')
   end
 end
